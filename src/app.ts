@@ -1,6 +1,6 @@
-import { ICharacter, ICharacterResult } from "./interfaces/ICharacter";
-import { IEpisode, IEpisodeResult } from "./interfaces/IEpisode";
-import { ILocation, ILocationResult } from "./interfaces/ILocation";
+import { ICharacterResult } from "./interfaces/ICharacter";
+import { IEpisodeResult } from "./interfaces/IEpisode";
+import { ILocationResult } from "./interfaces/ILocation";
 
 const BASE_URL = "https://rickandmortyapi.com/api";
 const CHARACTER_ROUTE = `${BASE_URL}/character`;
@@ -23,8 +23,8 @@ characterElement.addEventListener("click", async () => {
   try {
     const response = await fetch(CHARACTER_ROUTE);
     const data = await response.json();
-    outputElement.innerHTML = "";
     console.log(data);
+    outputElement.innerHTML = "";
     data.results.forEach((result: ICharacterResult) => {
       const characterContainer = document.createElement(
         "div"
@@ -42,13 +42,13 @@ function displayCharacter(character: ICharacterResult): string {
   const resultString = `
     <div>
     <p>Name: ${character.name}</p>
-      <p>Status: ${character.status}</p>
-      <p>Species: ${character.species}</p>
-      <p>Gender: ${character.gender}</p>      
-      <p>Origin: ${character.origin.name}</p>
-      <p>Location: ${character.location.name}</p>
-      </div>
-      <img src="${character.image}" alt="${character.name}>
+    <p>Status: ${character.status}</p>
+    <p>Species: ${character.species}</p>
+    <p>Gender: ${character.gender}</p>      
+    <p>Origin: ${character.origin.name}</p>
+    <p>Location: ${character.location.name}</p>
+    </div>
+    <img src="${character.image}" alt="${character.name}>
     `;
   return resultString;
 }
