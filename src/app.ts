@@ -1,5 +1,5 @@
-import { ICharacter, ICharacterResult } from "./interfaces/ICharacter";
-import { IEpisode, IEpisodeResult } from "./interfaces/IEpisode";
+import { ICharacterResult } from "./interfaces/ICharacter";
+import { IEpisodeResult } from "./interfaces/IEpisode";
 import { ILocationResult } from "./interfaces/ILocation";
 
 const BASE_URL = "https://rickandmortyapi.com/api";
