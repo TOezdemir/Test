@@ -48,9 +48,8 @@ function displayCharacter(character: ICharacterResult): string {
     <p>Gender: ${character.gender}</p>      
     <p>Origin: ${character.origin.name}</p>
     <p>Location: ${character.location.name}</p>
-    <img src="${character.image}" alt="${character.name}"/>
     </div>
-    
+    <img src="${character.image}" alt="${character.name}"/>
     `;
   return resultString;
 }
