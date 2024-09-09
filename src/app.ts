@@ -1,6 +1,6 @@
-import { ICharacterResult } from "./interfaces/ICharacter";
-import { IEpisodeResult } from "./interfaces/IEpisode";
-import { ILocationResult } from "./interfaces/ILocation";
+import { ICharacter, ICharacterResult } from "./interfaces/ICharacter";
+import { IEpisode, IEpisodeResult } from "./interfaces/IEpisode";
+import { ILocation, ILocationResult } from "./interfaces/ILocation";
 
 const BASE_URL = "https://rickandmortyapi.com/api";
 const CHARACTER_ROUTE = `${BASE_URL}/character`;
@@ -48,7 +48,7 @@ function displayCharacter(character: ICharacterResult): string {
       <p>Origin: ${character.origin.name}</p>
       <p>Location: ${character.location.name}</p>
       </div>
-      <img src="${character.image}" alt="${character.name}
+      <img src="${character.image}" alt="${character.name}>
     `;
   return resultString;
 }
